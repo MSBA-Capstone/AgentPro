@@ -40,8 +40,7 @@ class OpenAIClient(ModelClient):
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_prompt}
             ],
-            temperature=temp,
-            max_tokens=tokens
+            temperature=temp
         )
         return response.choices[0].message.content
         
