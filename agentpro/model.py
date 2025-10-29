@@ -39,7 +39,9 @@ class OpenAIClient(ModelClient):
             messages=[
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_prompt}
-            ]
+            ],
+            verbosity="low",
+            reasoning_effort="low",
         )
         return response.choices[0].message.content
         
